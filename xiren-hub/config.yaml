@@ -1,0 +1,32 @@
+name: Xiren Hub
+slug: xiren_hub
+version: "1.0.3"
+description: Xiren Hub Add-On
+arch:
+  - amd64
+  - arm64
+
+image: ghcr.io/hem-bhagat-tark/xiren-hub
+
+boot: auto
+
+ports:
+  3000/tcp: 3000
+
+options:
+  cache_flush_interval: 2
+  ignore_message_older_than: 15
+  redundant_update_throttling_interval: 30
+  log_level: warn
+
+schema:
+  cache_flush_interval: int
+  ignore_message_older_than: int
+  redundant_update_throttling_interval: int
+  log_level: list(trace|debug|info|warn|error)
+
+environment:
+  CACHEFLUSHINTERVAL: "{{ options.cache_flush_interval }}"
+  IGNORE_MESSAGES_OLDER_THAN: "{{ options.ignore_message_older_than }}"
+  RedundantUpdateThrottlingInterval: "{{ options.redundant_update_throttling_interval }}"
+  LOG_LEVEL: "{{ options.log_level }}"
