@@ -1,6 +1,6 @@
 name: Xiren Hub
 slug: xiren_hub
-version: "1.0.3"
+version: "1.0.4"
 description: Xiren Hub Add-On
 arch:
   - amd64
@@ -31,3 +31,4 @@ environment:
   RedundantUpdateThrottlingInterval: "{{ options.redundant_update_throttling_interval }}"
 
   LOG_LEVEL: "{{ options.log_level }}"
+
