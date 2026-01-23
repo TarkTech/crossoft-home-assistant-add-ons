@@ -10,6 +10,8 @@ image: ghcr.io/hem-bhagat-tark/xiren-hub
 
 boot: auto
 
+init: false #needed for S6 V3
+
 ports:
   3000/tcp: 3000
 
@@ -31,4 +33,5 @@ environment:
   RedundantUpdateThrottlingInterval: "{{ options.redundant_update_throttling_interval }}"
 
   LOG_LEVEL: "{{ options.log_level }}"
+
 
