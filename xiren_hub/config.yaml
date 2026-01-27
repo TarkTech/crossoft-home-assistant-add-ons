@@ -27,12 +27,13 @@ schema:
   redundant_update_throttling_interval: int
   log_level: list(trace|debug|info|warn|error)
 
-environment:
-  CACHEFLUSHINTERVAL: "{{ options.cache_flush_interval }}"
-  IGNORE_MESSAGES_OLDER_THAN: "{{ options.ignore_message_older_than }}"
-  RedundantUpdateThrottlingInterval: "{{ options.redundant_update_throttling_interval }}"
+# environment:
+#   CACHEFLUSHINTERVAL: "{{ options.cache_flush_interval }}"
+#   IGNORE_MESSAGES_OLDER_THAN: "{{ options.ignore_message_older_than }}"
+#   RedundantUpdateThrottlingInterval: "{{ options.redundant_update_throttling_interval }}"
 
-  LOG_LEVEL: "{{ options.log_level }}"
+#   LOG_LEVEL: "{{ options.log_level }}"
+
 
 
 
