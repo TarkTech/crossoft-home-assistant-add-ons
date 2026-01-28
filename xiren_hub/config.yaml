@@ -39,8 +39,9 @@ schema:
   secondary_mqtt_url: url
   secondary_mqtt_username: str
   secondary_mqtt_password: password
-  ignore_message_older_than: int(0,)
+  ignore_messages_older_than: int(0,)
   redundant_update_throttling_interval: int(0,)
   allow_only_known_macs: bool
   known_macs: str
-  log_level: list(trace|debug|info|warn|error)
+  log_level: list(silly|debug|verbose|http|info|warn|error)
+
