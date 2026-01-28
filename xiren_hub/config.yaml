@@ -1,6 +1,6 @@
 name: Xiren Hub
 slug: xiren_hub
-version: "1.0.10"
+version: "1.0.12"
 description: Xiren Hub Add-On
 arch:
   - amd64
@@ -17,21 +17,30 @@ ports:
 
 options:
   cache_flush_interval: 2
-  ignore_message_older_than: 15
+  mqtt_url: 'mqtt://core-mosquitto:1883'
+  mqtt_username: ''
+  mqtt_password: ''
+  send_to_secondary_mqtt: false
+  secondary_mqtt_url: 'mqtt://sample-broker:1883'
+  secondary_mqtt_username: ''
+  secondary_mqtt_password: ''
+  ignore_messages_older_than: 15
   redundant_update_throttling_interval: 30
-  log_level: warn
+  allow_only_known_macs: false
+  known_macs: '085FF41FD552,2D6C9379DFDF'
+  log_level: info
 
 schema:
-  cache_flush_interval: int
-  ignore_message_older_than: int
-  redundant_update_throttling_interval: int
+  cache_flush_interval: int(0,)
+  mqtt_url: url
+  mqtt_username: str
+  mqtt_password: password
+  send_to_secondary_mqtt: bool
+  secondary_mqtt_url: url
+  secondary_mqtt_username: str
+  secondary_mqtt_password: password
+  ignore_message_older_than: int(0,)
+  redundant_update_throttling_interval: int(0,)
+  allow_only_known_macs: bool
+  known_macs: str
   log_level: list(trace|debug|info|warn|error)
-
-
-
-
-
-
-
-
-
