@@ -1,0 +1,27 @@
+configuration:
+  cache_flush_interval:
+    name: 'Cache Flush Interval (In Minutes)'
+  mqtt_url:
+    name: 'Primary MQTT - URL'
+  mqtt_username:
+    name: 'Primary MQTT - Username'
+  mqtt_password:
+    name: 'Primary MQTT - Password'
+  send_to_secondary_mqtt:
+    name: 'Send to Secondary MQTT'
+  secondary_mqtt_url:
+    name: 'Secondary MQTT - URL'
+  secondary_mqtt_username:
+    name: 'Secondary MQTT - Username'
+  secondary_mqtt_password:
+    name: 'Secondary MQTT - Password'
+  ignore_messages_older_than:
+    name: 'Ignore Messages Older Than (In Minutes)'
+  redundant_update_throttling_interval:
+    name: 'Redundant Update Throttling Interval (In Seconds)'
+  allow_only_known_macs:
+    name: 'Allow Only Known MACs'
+  known_macs:
+    name: 'Known MACs'
+  log_level:
+    name: 'Log Level'

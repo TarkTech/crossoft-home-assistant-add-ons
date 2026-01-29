@@ -1,6 +1,6 @@
 name: Xiren Hub
 slug: xiren_hub
-version: "1.0.12"
+version: "5.0.0.0"
 description: Xiren Hub Add-On
 arch:
   - amd64
@@ -14,6 +14,12 @@ init: false #needed for S6 V3
 
 ports:
   3000/tcp: 3000
+
+discovery:
+  - xiren
+
+services:
+  - xiren:provide
 
 options:
   cache_flush_interval: 2
@@ -44,4 +50,3 @@ schema:
   allow_only_known_macs: bool
   known_macs: str
   log_level: list(silly|debug|verbose|http|info|warn|error)
-
