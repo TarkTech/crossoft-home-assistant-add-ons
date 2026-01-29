@@ -18,9 +18,6 @@ ports:
 discovery:
   - xiren
 
-services:
-  - xiren:provide
-
 options:
   cache_flush_interval: 2
   mqtt_url: 'mqtt://core-mosquitto:1883'
